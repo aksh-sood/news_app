@@ -7,7 +7,12 @@ class NewsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: child,
+      child: Container(
+          child: Column(children: [
+        Image.network(imageUrl),
+        Text(title),
+        Text(content),
+      ])),
     );
   }
 }
