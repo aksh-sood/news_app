@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newz_app_aksh/views/home.dart';
+import 'package:newz_app_aksh/views/homescreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
+          primaryColor: Colors.white, backgroundColor: Colors.black54),
       home: Home(),
     );
   }

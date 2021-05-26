@@ -3,11 +3,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class News {
-  List<ArticleModel> news = [];
+  List<ArticleModel> newsData = [];
 
   Future<void> getNews() async {
     String url =
-        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a8f819d4b87b433baa9c555e6ab3127b";
+        "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=a8f819d4b87b433baa9c555e6ab3127b";
 
     var response = await http.get(Uri.parse(url));
     var jsonData = jsonDecode(response.body);
@@ -21,9 +21,8 @@ class News {
             url: element['url'],
             urlToImage: element['urlToImage'],
             content: element['content'],
-            publishedAt: element['publishedAt'],
           );
-          news.add(articleModel);
+          newsData.add(articleModel);
         }
       });
     }
